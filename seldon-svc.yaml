@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: seldon-svc
+  namespace: kubeflow
+  labels:
+    run: deep-mnist-webapp
+spec:
+  ports:
+  - port: 9000
+    protocol: TCP
+    name: 
+  externalIPs:
+  - <External Host IP>
+  selector:
+    run: deep-mnist-webapp
